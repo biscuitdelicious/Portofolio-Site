@@ -1,0 +1,40 @@
+.typing-animation {
+    color: #DFDDCE;
+    font-family: Avenir;
+    font-size: 38px;
+    position: relative;
+    left: 40px;
+    top: 150px;
+    text-align: left;
+    width: 470px;
+}
+
+
+.cursor {
+    animation: blink 1.5s infinite;
+    color: #DFDDCE;
+}
+
+@keyframes blink {
+    0% { opacity: .6; }
+    50% { opacity: .05; }
+    100% { opacity: .6; }
+}
+
+.nav-item .nav-link {
+    color: #DFDDCE;
+}
+
+.nav-item .nav-link:hover {
+    color: #99988d;
+}
+
+.about_me{
+    font-family: Avenir;
+    font-size: 18px;
+    position: absolute;
+    top: 200px;
+    right: 20px;
+}
+
+
