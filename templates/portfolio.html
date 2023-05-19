@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/portfolio_style.css">
 </head>
-<body> <!-- style='background: #202731;' -->
+<body style='background: #202731;'>
 
-<div class='container-lg mt-4 mx-auto'>
+<header class="d-flex justify-content-end py-3 pe-5 fs-4 ">
+      <ul class="nav nav-underline">
+        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+        <li class="nav-item" ><a href="/portfolio" class="nav-link disabled">Portfolio</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+      </ul>
+    </header>
+
+
+<div class='container-lg mt-3 mx-auto'>
 <div class="container text-center mx-auto">
   <div class="row align-items-start">
     <div class="col">
@@ -15,8 +25,8 @@
             <img src="static/Honda Civic Type R.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 1</h5>
-                <p class="card-text">Example description</p>
-                <a href="#" class="btn btn-primary">Link</a>
+                <p class="card-text fw-semibold">Example description</p>
+                <a href="#" class="btn btn-secondary">Link</a>
         </div>
     </div>
     </div>
@@ -25,8 +35,8 @@
             <img src="static/Honda Civic Type R.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 2</h5>
-                <p class="card-text">Example description</p>
-                <a href="#" class="btn btn-primary">Link</a>
+                <p class="card-text fw-semibold">Example description</p>
+                <a href="#" class="btn btn-secondary">Link</a>
         </div>
     </div>
     </div>
@@ -35,8 +45,8 @@
             <img src="static/Honda Civic Type R.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 3</h5>
-                <p class="card-text">Example description</p>
-                <a href="#" class="btn btn-primary">Link</a>
+                <p class="card-text fw-semibold">Example description</p>
+                <a href="#" class="btn btn-secondary">Link</a>
         </div>
     </div>
     </div>
@@ -44,15 +54,15 @@
 </div>
 
 
-<div class="container text-center mt-4 mx-auto">
+<div class="container text-center mt-5 mx-auto">
   <div class="row align-items-start">
     <div class="col">
         <div class="card" style="width: 20rem;">
             <img src="static/Honda Civic Type R.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 4</h5>
-                <p class="card-text">Example description</p>
-                <a href="#" class="btn btn-primary">Link</a>
+                <p class="card-text fw-semibold">Example description</p>
+                <a href="#" class="btn btn-secondary">Link</a>
         </div>
     </div>
     </div>
@@ -61,8 +71,8 @@
             <img src="static/Honda Civic Type R.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 5</h5>
-                <p class="card-text">Example description</p>
-                <a href="#" class="btn btn-primary">Link</a>
+                <p class="card-text fw-semibold">Example description</p>
+                <a href="#" class="btn btn-secondary">Link</a>
         </div>
     </div>
     </div>
@@ -71,17 +81,131 @@
             <img src="static/Honda Civic Type R.png" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Project 6</h5>
-                <p class="card-text">Example description</p>
-                <a href="#" class="btn btn-primary">Link</a>
+                <p class="card-text fw-semibold">Example description</p>
+                <a href="#" class="btn btn-secondary">Link</a>
         </div>
     </div>
     </div>
   </div>
 </div>
 </div>
+<script>
+
+var canvas = document.getElementById('container');
+var clone = document.getElementById('blurCanvasBottom');
+
+var cloneCtx = clone.getContext('2d');
+var ctx = canvas.getContext('2d');
 
 
+var w = $('#blurCanvasTop').width();
+var h = $('#blurCanvasTop').height();
+
+var ww = $(window).width();
+var wh = $(window).height();
+canvas.width = ww;
+canvas.height= wh;
+var partCount = 100;
+var particles = [];
+
+function particle(){
+  this.color = 'rgba(255,255,255,'+ Math.random()+')';
+  console.log(this.color);
+  this.x = randomInt(0,ww);
+  this.y = randomInt(0,wh);
+  this.direction = {
+    "x": -1 + Math.random() * 2,
+    "y": -1 + Math.random() * 2
+  };
+  this.vx = 0.3 * Math.random();
+  this.vy = 0.3 * Math.random();
+  this.radius = randomInt(2,3);
+  this.float = function(){
+    this.x += this.vx * this.direction.x;
+    this.y += this.vy * this.direction.y;
+  };
+  this.changeDirection = function (axis) {
+    this.direction[axis] *= -1;
+  };
+  this.boundaryCheck = function () {
+            if (this.x >= ww) {
+                this.x = ww;
+                this.changeDirection("x");
+            } else if (this.x <= 0) {
+                this.x = 0;
+                this.changeDirection("x");
+            }
+            if (this.y >= wh) {
+                this.y = wh;
+                this.changeDirection("y");
+            } else if (this.y <= 0) {
+                this.y = 0;
+                this.changeDirection("y");
+            }
+        };
+  this.draw = function () {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+    ctx.fill();
+  };
+}
+function clearCanvas() {
+ cloneCtx.clearRect(0, 0, ww, wh);
+ ctx.clearRect(0, 0, ww, wh);
+}
+function createParticles(){
+  for (i=0;i<partCount;i++){
+    var p = new particle();
+    particles.push(p);
+  }
+}
+function drawParticles() {
+   for (i=0;i<particles.length;i++) {
+     p = particles[i];
+     p.draw();
+   }
+}
+function updateParticles() {
+        for (var i = particles.length - 1; i >= 0; i--) {
+            p = particles[i];
+            p.float();
+            p.boundaryCheck();
+        }
+}
+createParticles();
+drawParticles();
+function animateParticles() {
+        clearCanvas();
+        drawParticles();
+        updateParticles();
+        cloneCtx.drawImage(canvas, 0, 0);
+        requestAnimationFrame(animateParticles);
+    }
+requestAnimationFrame(animateParticles);
+cloneCtx.drawImage(canvas, 0, 0);
+
+$(window).on('resize',function(){
+  ww = $(window).width();
+  wh = $(window).height();
+  canvas.width = ww;
+  canvas.height= wh;
+  clearCanvas();
+  particles = [];
+  createParticles();
+  drawParticles();
+});
+function randomInt(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+function velocityInt(min,max)
+{
+    return Math.random()*(max-min+1)+min;
+}
+</script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
+```

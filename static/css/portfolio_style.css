@@ -1,0 +1,26 @@
+.btn.btn-secondary{
+      background: #707F99;
+      color: white;
+      transition: transform .3s;
+  }
+
+.card-body{
+      background-color: #ffee93;
+      color: black;
+}
+
+body{
+      background: #202731;
+}
+
+.btn.btn-secondary:hover{
+    transform: scale(1.1);
+}
+
+.nav-item .nav-link {
+    color: #DFDDCE;
+}
+
+.nav-item .nav-link:hover {
+    color: #99988d;
+}

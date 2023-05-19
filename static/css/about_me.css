@@ -1,0 +1,16 @@
+#top{
+    background: #202731;
+    height: 100px;
+    width: 2000px;
+}
+
+#middle{
+    background: #205731;
+    height: 100px;
+    width: 2000px;
+}
+#bottom{
+    background: #905731;
+    height: 100px;
+    width: 3000px;
+}

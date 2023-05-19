@@ -41,9 +41,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/CSSRulePlugin.min.js" integrity="sha512-1z2hYE5HWzZW8cAJRhlwT472AGZC3HlJyWYmW3SXG/Qh0S6TFdkYEqJaPwT7eCy9tI4KvwrRVK6IGqtqErpHQg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     
-    
-
-    <script>
+<script>
     document.addEventListener("DOMContentLoaded", function() {
         const typedTextSpan = document.querySelector("#typed-text");
         const textArray = ["Welcome to my kingdom!"];
@@ -66,7 +64,7 @@
     });
     </script>
 
-        <script>
+<script>
 
         const loader = new THREE.TextureLoader;
         const star = loader.load('../static/assets/img/star.png')
@@ -75,7 +73,7 @@
 
         const scene = new THREE.Scene()
 
-        const geometry = new THREE.SphereBufferGeometry( .8, 32, 40);
+        const geometry = new THREE.SphereBufferGeometry( .85, 32, 40);
         const particlesGeometry = new THREE.BufferGeometry;
         const particlesCnt = 1400;
 
@@ -161,7 +159,7 @@
 
             sphere.rotation.y = .12 * elapsedTime
             sphere.rotation.x = .12 * elapsedTime
-            particlesMesh.rotation.y = -.4 * elapsedTime
+            particlesMesh.rotation.y = -.1 * elapsedTime
 
             renderer.render(scene, camera)
 
