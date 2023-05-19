@@ -1,6 +1,5 @@
 # Main personal website
 
-=================
 
 ## What's the use of the website?
 ### To show my big projects that I'm working on 
