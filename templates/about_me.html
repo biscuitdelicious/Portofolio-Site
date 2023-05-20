@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="static/css/about_me.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/about_style.css">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
@@ -17,20 +17,34 @@
     </header>
 
 <div class='container-lg' id="top">
-    s
-    <!--
+<!--    short text about me + circle picture-->
+    <img src="static/about_picture.png" class="rounded mx-auto d-block" alt="picture_of_me">
+    
+
+<script src="three.r134.min.js"></script>
+<script src="vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#top",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xa72351,
+  backgroundColor: 0x291d41,
+  points: 20.00,
+  maxDistance: 12.00,
+  spacing: 20.00
+})
+</script>
 
 
-
-    short text about me + circle picture
-
-
-
-    -->
 </div>
 
-<div class='container-lg' id="middle">
-    r
+<!--<div class='container-lg' id="middle">-->
     <!--
 
 
@@ -39,12 +53,11 @@
 
 
     -->
-</div>
+<!--</div>-->
 
 
 
-<div class='container-lg' id="bottom">
-    s
+<!--<div class='container-lg' id="bottom">-->
     <!--
 
 
@@ -54,7 +67,7 @@
 
 
     -->
-</div>
+<!--</div>-->
 
 
 

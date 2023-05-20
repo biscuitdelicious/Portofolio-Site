@@ -1,9 +1,13 @@
-#top{
-    background: #202731;
-    height: 100px;
-    width: 2000px;
+body {
+    background: #202731 !important;
 }
 
+#top{
+    background: #938274;
+}
+
+
+/*
 #middle{
     background: #205731;
     height: 100px;
@@ -13,4 +17,28 @@
     background: #905731;
     height: 100px;
     width: 3000px;
+}
+*/
+
+.nav-item .nav-link {
+    color: #DFDDCE;
+}
+
+.nav-item .nav-link:hover {
+    color: #99988d;
+}
+
+.rounded.mx-auto.d-block{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  opacity: 0.65;
+  filter: alpha(opacity=40);
+  clip-path: circle();
+}
+
+.rounded.mx-auto.d-block:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
 }
