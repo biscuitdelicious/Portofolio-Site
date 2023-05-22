@@ -2,25 +2,11 @@ body {
     background: #202731 !important;
 }
 
-#top{
-    background: #938274;
-}
-
-
-/*
-#middle{
-    background: #205731;
-    height: 100px;
-    width: 2000px;
-}
-#bottom{
-    background: #905731;
-    height: 100px;
-    width: 3000px;
-}
-*/
-
 .nav-item .nav-link {
+    color: #DFDDCE;
+}
+
+.nav-item .nav-link.disabled {
     color: #DFDDCE;
 }
 
@@ -42,3 +28,34 @@ body {
         opacity: 1;
         filter: alpha(opacity=100);
 }
+
+#top{
+    background: #9EBC9F;
+    border-radius: 30px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.description{
+    font-family: Ranade Variable;
+    font-size: 38px;
+    width: 800px;
+}
+
+
+
+#middle{
+    background: #9EBC9F;
+    border-radius: 30px;
+    height: 450px;
+}
+/*
+#bottom{
+    background: #905731;
+    height: 100px;
+    width: 3000px;
+}
+*/
+

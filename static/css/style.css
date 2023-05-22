@@ -29,12 +29,16 @@
     color: #99988d;
 }
 
+.nav-item .nav-link.disabled {
+    color: #DFDDCE;
+}
+
 .about_me{
-    font-family: Avenir;
+    font-family: Ranade Variable;
     font-size: 18px;
     position: absolute;
     top: 200px;
-    right: 20px;
+    right: 10px;
 }
 
 
